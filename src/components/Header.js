@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import styled from 'styled-components'
 import { AiFillBell, AiOutlineSearch } from 'react-icons/ai'
 import { GrPinterest } from 'react-icons/gr'
@@ -6,7 +6,14 @@ import { BsFillChatDotsFill } from 'react-icons/bs'
 import { FaUserCircle } from 'react-icons/fa'
 import { MdKeyboardArrowDown } from 'react-icons/md'
 
-const Header = () => {
+const Header = (props) => {
+    const [search, setSearch] = useState()
+
+    const searchSubmit = (e) => {
+        e.preventDefault()
+        props.onSubmit(search)
+    }
+
     return (
         <Wrapper>
             <LogoWrapper>
@@ -19,8 +26,12 @@ const Header = () => {
                     <AiOutlineSearch size="22px" />
                 </IconButton>
                 
-                <form>
-                    <input type="text" placeholder="Search" />
+                <form onSubmit={searchSubmit}>
+                    <input 
+                        type="text" 
+                        placeholder="Search" 
+                        onChange={(e) => setSearch(e.target.value)}
+                    />
                     <button type="submit"></button>
                 </form>
                 

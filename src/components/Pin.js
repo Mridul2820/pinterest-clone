@@ -1,11 +1,11 @@
 import React from 'react'
 import styled from 'styled-components'
 
-const Pin = () => {
+const Pin = ({ url, alt }) => {
     return (
         <Wrapper>
             <Container>
-                <img src="https://images.unsplash.com/photo-1624916889635-13b5e92c1be0?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=334&q=80" alt="" />
+                <img src={url} alt={alt} />
             </Container>
         </Wrapper>
     )
