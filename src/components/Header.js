@@ -46,8 +46,8 @@ const Header = () => {
 const Wrapper = styled.div`
     display: flex;
     align-items: center;
-    height: 56px;
-    padding: 12px 4px 4px 16px;
+    height: 66px;
+    padding: 16px 4px;
     color: #000;
 `
 
@@ -79,7 +79,7 @@ const SearchWrap = styled.div`
     background: #efefef;
     display: flex;
     align-items: center;
-    height: 48px;
+    height: 44px;
     width: 100%;
     border-radius: 999px;
     padding: 0 10px;
