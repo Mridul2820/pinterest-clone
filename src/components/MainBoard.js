@@ -3,6 +3,8 @@ import styled from 'styled-components'
 import Pin from './Pin'
 
 const MainBoard = ({ photos }) => {
+    // console.log('photos', photos);
+
     return (
         <Wrapper>
             <Container>
@@ -27,7 +29,6 @@ const Wrapper = styled.div`
 `
 
 const Container = styled.div`
-    background-color: white;
     column-gap: 10px;
     margin: 0 auto;
     height: 100%;
