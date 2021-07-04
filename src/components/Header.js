@@ -60,6 +60,7 @@ const Wrapper = styled.div`
     height: 66px;
     padding: 16px 4px;
     color: #000;
+    width: 100%;
 `
 
 const LogoWrapper = styled.div`
@@ -74,11 +75,19 @@ const HomePage = styled.div`
     border-radius: 999px;
     font-weight: 700;
     margin: 0 5px;
+
+    @media (max-width: 559px) {
+        display: none;
+    }
 `
 
 const Following = styled(HomePage)`
     background: #fff;
     color: #222;
+
+    @media (max-width: 559px) {
+        display: none;
+    }
 
     &:hover {
         background: #ddd;

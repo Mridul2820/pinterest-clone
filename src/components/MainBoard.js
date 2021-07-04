@@ -21,13 +21,48 @@ const MainBoard = ({ photos }) => {
 const Wrapper = styled.div`
     display: flex;
     justify-content: center;
-    height: 100%;
     width: 100%;
-    margin-top: 50px;
+    height: 100%;
+    margin-top: 15px;
 `
 
 const Container = styled.div`
-    width: 80%;
+    background-color: white;
+    column-gap: 10px;
+    margin: 0 auto;
+    height: 100%;
+    overflow-x: hidden;
+
+    @media (min-width: 0px) and (max-width: 559px) {
+        max-width: 236px;
+        column-count: 1;
+    }
+
+    @media (min-width: 560px) and (max-width: 755px) {
+        max-width: 504px;
+        column-count: 2;
+    }
+
+    @media (min-width: 756px) and (max-width: 1007px) {
+        max-width: 756px;
+        column-count: 3;
+    }
+
+    @media (min-width: 1008px) and (max-width: 1259px) {
+        max-width: 1008px;
+        column-count: 4;
+    }
+
+    @media (min-width: 1260px) and (max-width: 1600px) {
+        max-width: 1260px;
+        column-count: 5;
+    }
+
+    @media (min-width: 1600px) {
+        width: 1600px;
+        column-count: 6;
+    }
+
 `
 
 export default MainBoard

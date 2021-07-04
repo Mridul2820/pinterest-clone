@@ -14,22 +14,20 @@ const App = () => {
 
     const getImages = async (search) => {
         if(search) {
-            url = `${searchUrl}${clientID}&query=${search}`
+            url = `${searchUrl}${clientID}&query=${search}&per_page=40`
         }
         else {
-            url = `${mainUrl}${clientID}`
+            url = `${mainUrl}${clientID}&per_page=40`
         }
 
         const results = await axios.get(url)
-
         if(search){
             setPhotos(results.data.results)
         }
         else {
             setPhotos(results.data)
         }
-
-        // console.log(results.data);
+        console.log(results.data);
     }
 
     useEffect(() => {
