@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import GlobalStyle from './GlobalStyles'
 import Header from './components/Header'
 import MainBoard from './components/MainBoard'
+import FooterMain from './components/FooterMain'
 import axios from 'axios'
 
 const clientID = `?client_id=${process.env.REACT_APP_API_KEY}`
@@ -40,6 +41,7 @@ const App = () => {
             <GlobalStyle />
             <Header onSubmit={getImages} />
             <MainBoard photos={photos} />
+            <FooterMain />
         </div>
     )
 }
